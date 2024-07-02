@@ -1,5 +1,1 @@
-nottoken
-
-nottoken.txt
-
-nottoken.*
+/tokie.txt
