@@ -38,13 +38,13 @@ class PremiumUser(RegularUser):
         return 'Наш менеджер скоро свяжется с Вами!'
 
     def weather(self, city: str):
-        if city == 'Даня Чанба':
-            return 'в этом данчоусе уровень нефорства составляет 100%'
         APIkey = 'c5b958b340553dc18809850bcb581bd3'
         res = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={APIkey}&units=metric').json()
         if 'main' not in res:
             return 'Извините, мы про такой город слышим впервые'
         temp = res['main']['temp']
+        if city in ['Привет', 'привет']:
+            return f'В посёлке Привет Кинель-Черкасского района Самарской области температура воздуха составляет {temp}°C'
         return f'В этом городе сейчас температура воздуха составляет {temp}°C'
 
 
