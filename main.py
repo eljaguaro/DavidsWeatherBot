@@ -1,7 +1,7 @@
 import logging
 import argparse
 
-# import telegram as tg
+import telegram as tg
 import telegram.ext as tg_ext
 
 from bot import handlers
